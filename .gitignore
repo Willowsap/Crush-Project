@@ -6,6 +6,9 @@
 # dependencies
 /node_modules
 
+# information and descriptions used to design the app from
+/Crush5 Assets
+
 # misc
 .env.local
 .env.development.local
