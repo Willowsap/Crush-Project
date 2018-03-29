@@ -9,16 +9,21 @@ export default StyleSheet.create({
     alignItems: 'stretch',
   },
   header : {
-      flex: 0.20,
+      flex: 0.2,
   },
-  habits : {
+  habitScroll : {
     flexDirection: 'column',
-    flex: 0.80,
-    alignItems: 'stretch',
+    flex: 1,
     backgroundColor: '#fff',
   },
+  habitContainer : {
+    flexDirection: 'column',
+    flex: 1,
+    alignItems: 'stretch',
+    justifyContent: 'flex-start',
+  },
   addHabit : {
-    flex:0.2,
+    position: 'absolute',
     alignItems: 'flex-end',
     flexDirection: 'row',
     justifyContent: 'flex-end',

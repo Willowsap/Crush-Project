@@ -1,6 +1,13 @@
 'use strict';
 import React from 'react';
-import {Text, View, Button, TextInput, Modal, StyleSheet, ScrollView, KeyboardAvoidingView } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  Modal,
+  ScrollView,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 
 import styles from './HabitEditStyles.js';
 import CrushButton from 'App/Components/Common/CrushButton.js';

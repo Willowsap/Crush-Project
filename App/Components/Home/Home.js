@@ -1,20 +1,22 @@
 'use strict';
 
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image, Alert} from 'react-native';
+import {
+  Alert,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+import styles from './HomeStyles.js';
 import Header from 'App/Components/Home/Header/Header.js';
 import Habit from 'App/Components/Home/Habit/Habit.js';
 import HabitEdit from 'App/Components/Home/HabitEdit/HabitEdit.js';
 
-import styles from './HomeStyles.js';
-
 export default class Home extends React.Component {
-
   constructor(props, context) {
     super(props, context);
-
     this.state = {
       crushNum : 4,
       habits : [
@@ -48,13 +50,13 @@ export default class Home extends React.Component {
         <View style={styles.header}>
           <Header crushNum={this.state.crushNum} />
         </View>
-        <View style={styles.habits}>
+        <ScrollView style={styles.habitScroll} contentContainerStyle={styles.habitContainer}>
           {
             (habits.length > 0)
             ? habits
             : <Text>No Habits Yet</Text>
           }
-        </View>
+        </ScrollView>
         <View style={styles.addHabit}>
           <Icon.Button name="plus-circle" backgroundColor='white' size={60} color='purple' onPress={this.addHabit} />
         </View>
